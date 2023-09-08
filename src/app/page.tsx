@@ -1,15 +1,10 @@
-import Image from 'next/image'
-import Trips from './components/trips'
-
-export const metadata = {
-  title: 'Home',
-}
+"use client";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
   return (
-    <>
-    <h1>Hello</h1>
-    <Trips/>
-    </>
-  )
+    <div>
+      <button onClick={() => signIn()}>Login</button>
+    </div>
+  );
 }
